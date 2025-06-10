@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tasty Tandoori Miranda - Cart</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/x-icon" href="icons/iconTTM192.png" sizes="192x192">
+    <meta name="theme-color" content="#E82A63" />
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="left">
+                <img src="images/TTMrq.png" alt="Tasty Tandoori Logo" />
+                <h1>Cart</h1>
+            </div>
+            <ul class="right">
+                <li><a href="homepage.html">Home</a></li> 
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li id="admin-link" class="hidden"><a href="admin-dashboard.html">Admin</a></li>
+            </ul>
+            <p>Hm</p>
+        </nav>
+
+        <div id ="cart-body">
+            <h1 id="cart-username">User's Cart</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th id = "empty">Empty</th>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-table-body"></tbody>
+                <tfoot>
+                    <tr id="cart-total-row"></tr>
+                </tfoot>
+            </table>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+        <div id="checkout-modal" class="checkout-modal hidden">
+            <div class="checkout-modal-box">
+                <span class="checkout-close">&times;</span>
+                <h2>Confirm Checkout</h2>
+                <p>Your total is: <strong id="checkout-total"></strong></p>
+                <button id="pay-now-btn">Pay Now</button>
+            </div>
+        </div>
+        <div id="here-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3>Payment Success</h3>
+                <p>Please click below when you're at Tasty Tandoori Miranda or nearby.</p>
+                <button id="im-here-btn">I'm here</button>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
